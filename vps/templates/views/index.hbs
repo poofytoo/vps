@@ -1,0 +1,36 @@
+{{!< default}}
+<div class="sticky-nav">
+<h1>Victor Hung</h1>
+</div>
+<div class="row header">
+	<div class="large-12 column header-content">
+		<div class="me-graphic">
+			<img class="me" src="/images/me-wrench.svg" />
+			<img class="wrench" src="/images/wrench.svg" />
+		</div>
+		<div class="title-text">
+			<h1>Victor Hung</h1>
+			<h2>here are my <em>real life</em> projects</h2>
+			<h2 class="subtext">my online ones can be <a class="highlight" href="http://victorhh.com">found here</a>!</h2>
+		</div>
+	</div>
+	<div class="row look-down-container">
+		<div class="look-down"></div>
+	</div>
+</div>
+<div class="container">
+	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+	{{# each data.posts.results}}
+	  <li class="project-item-container" style="background-image:url('{{{image.url}}}');">
+	  	<a href="{{postUrl slug}}">
+		  	<div class="project-item">
+					<h3>{{{title}}}</h3>
+					{{{content.brief}}}
+				</div>
+			</a>
+		</li>
+	{{/each}}
+	</ul>
+</div>
+
+<script src="/js/main.js"></script>
