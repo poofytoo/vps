@@ -37,6 +37,32 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+#body {
+  position: relative;
+  background: url('../images/island-background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.content {
+  background-color: #fff;
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.5);
+
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.335, 1.05);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
 h1 {
   margin: 0;
   font-size: 28px;
@@ -141,6 +167,70 @@ a {
 
   @media screen and ( max-height: 640px ){
     height: 100% !important;
+  }
+}
+
+.about {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  margin-right: 30px;
+  font-weight: 500;
+  color: #000;
+  outline: none;
+  opacity: 0.4;
+  z-index: 5;
+  @include transition(all, 0.4s, ease-out);
+
+  &:hover{
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 0;
+    @include transition(all, 0.4s, ease-out);
+  }
+
+  &:focus + .content {
+    width: 80%;
+    transform: translate3d(-4%, 0, 0) scale3d(0.8, 0.8, 1) !important;
+    -webkit-transform: translate3d(-4%, 0, 0) scale3d(0.8, 0.8, 1) !important;
+
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.5);
+
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.335, 1.05);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+}
+
+.about-content {
+  z-index: 1;
+  position: absolute;
+  padding-left: 20px;
+  right: 4%;
+  width: 25%;
+  top: 10%;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.5em;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  max-height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  em {
+    font-weight: bold;
+    font-style: normal;
+    color: #ffdfb2;
+  }
+
+  .my-email {
+    opacity: 0.8;
   }
 }
 
@@ -297,6 +387,38 @@ a {
 
 ul {
   margin: none;
+  position: relative;
+
+  .project-details-row {
+    // top: 0;
+    // background-color: #fff;
+    border: 0.5px solid #666;
+    border-width: 1px 0;
+    padding: 20px 25px 10px 30px;
+    display: none;
+    clear: both;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 0;
+      line-height: normal;
+    }
+  }
+}
+
+.projects-group {
+  // z-index: 5;
+  width: 100%;
+  // position: relative;
+}
+
+.project-details-container {
+  display: none;
+  div:first-child {
+    background-color: yellow;
+  }
 }
 
 .full-width {

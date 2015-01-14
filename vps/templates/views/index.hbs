@@ -1,4 +1,13 @@
 {{!< default}}
+<div class="about-content">
+	<h1>Hi there!</h1>
+	<p>I'm Victor, a student studying at MIT, and a cross between a <em>computer</em> engineer, <em>mechanical</em> engineer, and a <em>nice-things</em>-enthusiast. I enjoy <em>production</em>-related activities and dealing with logistical nightmares- I also do <em>photography</em> every now and then. This place is a collection of projects I've worked on. If you like what you see or you're interested in any of my work, please feel free to contact me at:</p>
+	<p class="my-email">victorhung92@gmail.com</p>
+</div>
+<div class="about" tabindex="0">
+	about
+</div>
+<div class="content">
 <div class="sticky-nav">
 <h1>Victor Hung</h1>
 </div>
@@ -21,11 +30,12 @@
 <div class="container">
 	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 	{{# each data.posts.results}}
-	  <li class="project-item-container" style="background-image:url('{{{image.url}}}');">
-	  	<a href="{{postUrl slug}}">
+	  <li data-blockid="{{{id}}}" class="project-item-container" style="background-image:url('{{{image.url}}}');">
+	  	<a><!--href="{{postUrl slug}}"-->
 		  	<div class="project-item">
 					<h3>{{{title}}}</h3>
 					{{{content.brief}}}
+		
 				</div>
 			</a>
 		</li>
@@ -33,4 +43,13 @@
 	</ul>
 </div>
 
+<div class="project-details-container">
+{{# each data.posts.results}}
+	<div class="project-details" data-blockid="{{{id}}}">
+		<h1>{{{title}}}</h1>
+		{{{content.extended}}} 
+	</div>
+{{/each}}
+</div>
+</div>
 <script src="/js/main.js"></script>
