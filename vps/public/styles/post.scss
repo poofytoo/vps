@@ -44,6 +44,7 @@
     left: 0;
     padding-top: 20px;
     line-height: normal;
+    height: 100%;
   }
 
   .row {
@@ -53,6 +54,7 @@
   .extended-content {
     background-color: #fff;
     padding-top: 30px;
+    height: 100%;
   }
 
   .background {
@@ -94,6 +96,38 @@
       height: 200px;
       width: 100%;
 
+    }
+  }
+
+  .slideshow {
+    max-width: 500px;
+    margin: 40px auto;
+
+    .slick-list {
+      padding: 0 !important;
+    }
+
+    .slick-slide {
+      padding-right: 5px;
+    }
+
+    .slick-slider {
+      margin-bottom: 10px !important;
+    }
+
+    .slider-nav {
+      img {
+        max-height: 100px;
+        width: initial !important;
+        margin-right: 20px !important;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .slick-slide {
+        max-width: 160px;
+      }
     }
   }
 }

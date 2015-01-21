@@ -34,12 +34,14 @@
     right: 0;
     left: 0;
     padding-top: 20px;
-    line-height: normal; }
+    line-height: normal;
+    height: 100%; }
   .post .row {
     max-width: 55em !important; }
   .post .extended-content {
     background-color: #fff;
-    padding-top: 30px; }
+    padding-top: 30px;
+    height: 100%; }
   .post .background {
     position: absolute;
     transform: translateZ(-1px) scale(2);
@@ -72,3 +74,20 @@
     .post .header .header-background {
       height: 200px;
       width: 100%; }
+  .post .slideshow {
+    max-width: 500px;
+    margin: 40px auto; }
+    .post .slideshow .slick-list {
+      padding: 0 !important; }
+    .post .slideshow .slick-slide {
+      padding-right: 5px; }
+    .post .slideshow .slick-slider {
+      margin-bottom: 10px !important; }
+    .post .slideshow .slider-nav img {
+      max-height: 100px;
+      width: initial !important;
+      margin-right: 20px !important; }
+      .post .slideshow .slider-nav img:hover {
+        cursor: pointer; }
+    .post .slideshow .slider-nav .slick-slide {
+      max-width: 160px; }
