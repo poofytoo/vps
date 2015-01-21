@@ -1,7 +1,54 @@
-<div class="container">
+<div class="container post">
+
+<!--
 	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-			<article>
+		<div class="columns">
+			<h1>{{data.post.title}}</h1>
+		</div>
+	</div>
+	-->
+	<div class="background">
+		<div class="bg-img" style="background-image:url('{{data.post.image.url}}');">
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="header container">
+			<div class="row">
+				<div class="column">
+					<a class="back" href="/#projects">back to projects</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<h1>{{data.post.title}}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="container extended-content">
+			<div class="row">
+				<div class="column">
+					{{{data.post.content.extended}}}
+				<p>
+		Porro tamquam reprehendunt duo in, zril dictas ex vix, ne nam eripuit voluptua disputationi. Minim verear theophrastus has in. Usu laudem numquam platonem et, harum ridens ea his, usu alterum vivendo postulant an. Te singulis repudiandae nec, id ornatus iracundia mea.
+		</p>
+
+<p>
+		Ut mei case aeque maiestatis. Ex semper moderatius pri. Nihil eripuit percipitur ei vis. Constituto scripserit dissentiunt id vim, everti placerat definiebas et usu.
+</p>
+<p>
+		Ut mei case aeque maiestatis. Ex semper moderatius pri. Nihil eripuit percipitur ei vis. Constituto scripserit dissentiunt id vim, everti placerat definiebas et usu.
+</p>
+					<div class="back-btn">
+					<a class="back dark" href="/#projects">back to projects</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	<div class="content row">
+  	<div class="columns">
 				<p><a href="/">&larr; back home</a></p>
 				<hr>
 				<header>
@@ -13,8 +60,19 @@
 				</header>
 				<div class="post">
 					{{{data.post.content.extended}}}
+					Lorem ipsum dolor sit amet, tamquam labores maiestatis duo te. Insolens ocurreret quo ea. Te est erroribus repudiare disputationi. Dicta mucius aliquid vis ut, probo sonet saperet ne eam. Tota paulo dictas no eam, et feugait antiopam vel, solet aliquid ut qui.
+
+Porro tamquam reprehendunt duo in, zril dictas ex vix, ne nam eripuit voluptua disputationi. Minim verear theophrastus has in. Usu laudem numquam platonem et, harum ridens ea his, usu alterum vivendo postulant an. Te singulis repudiandae nec, id ornatus iracundia mea.
+
+Ut mei case aeque maiestatis. Ex semper moderatius pri. Nihil eripuit percipitur ei vis. Constituto scripserit dissentiunt id vim, everti placerat definiebas et usu.
+
+Munere dicunt recusabo ad duo, ut possit explicari referrentur eam. Ea ius fastidii nominati comprehensam, in alia epicuri quo, has ut iusto dicit insolens. Iuvaret nusquam intellegam no per, has id alterum volumus voluptua. Qui eu impedit definitionem, at justo illum mei, mea fugit partiendo philosophia et. Ludus neglegentur eam cu, ne dolor maiorum duo. Te vix etiam sonet.
+
+Malorum lobortis mei ei, persius propriae recteque has te. Tibique commune scribentur vis ut, movet prodesset mei ne, ei mei dolorem legendos voluptatibus. Ceteros instructior deterruisset te est, quo ex tollit inermis, ad has quas explicari liberavisse. Veri convenire quaerendum pri cu. Prima deterruisset nec an, discere denique dissentiet vel an. Per et natum mentitum, nisl erat eos ut, deleniti scripserit pri id.
 				</div>
-			</article>
 		</div>
 	</div>
+	-->
 </div>
+
+<script src="/js/post.js"></script>

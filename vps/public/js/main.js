@@ -2,6 +2,16 @@ $(function() {
   $('.me-graphic').fadeIn().css("display","inline-block");
   $('.title-text').delay(100).fadeIn();
 
+  $('.about').on('click', function() {
+    $('.content').addClass('content-shrink');
+    $('.about').addClass('about-shrink');
+  })
+
+  $('.content').on('click', function() {
+    $('.content').removeClass('content-shrink');
+    $('.about').removeClass('about-shrink');
+  })
+
   $('.look-down').click(function() {
     $('.content').scrollTo($('ul'), 500, {easing:'easeOutQuart',  offset:-30});
   });
@@ -35,11 +45,19 @@ $(function() {
       return 1;
     }
   }
-
+/*
   $('li').on('click', function() {
     $('.project-details-row').slideUp(300);
     $('#' + $(this).data('blockid')).slideDown(300);
     $(document).scrollTo({top:'+=150px', left: 0}, 300);
+  });
+*/
+  $('li').on('click', function() {
+    var newLocation = $(this).find('a').attr('href')
+    event.preventDefault();
+    $('body').fadeOut(200, function() {
+      window.location = newLocation;
+    });
   });
 
   var regenerateProjectDetails = function() {
@@ -51,7 +69,6 @@ $(function() {
       if (counter%BREAKPOINT == 0) {
         $divContainer = $('<div class="projects-group"></div>');
         for (i = counter; i >= lastAddedDiv; i--) {
-
           if (i == 1) {
             nSel = 'div:first-child';
           } else {
