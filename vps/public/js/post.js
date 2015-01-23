@@ -2,6 +2,15 @@ $(document).ready(function() {
   $('body').css('display', 'none');
   $('body').fadeIn(200);
 
+  // Link Images
+  $('img').each(function() {
+    $this = $(this);
+    if (!$this.parent().hasClass('slideshow') && $this.parent().attr('href') == undefined) {
+      $this.wrap('<a></a>');
+      $this.parent().attr('href', $this.attr('src'))
+    }
+  });
+
   // Slideshow Builder
   // Place <img> tags in a 'slideshow' div and watch it auto generate! Dang!
   
@@ -34,5 +43,6 @@ $(document).ready(function() {
     centerMode: true,
     focusOnSelect: true
   });
+
 
 });

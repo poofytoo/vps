@@ -16,8 +16,30 @@
     letter-spacing: 20px;
   }
 
+  a {
+    text-decoration: none;
+    color: #3867ff;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  p {
+    line-height: 1.4em;
+  }
+
+  .video {
+    text-align: center;
+    margin: 30px auto;
+  }
+
+  iframe {
+    margin: 0 auto;
+  }
+
   .back-btn {
-    margin-top: 50px;
+    margin: 50px 0;
   }
 
   .back {
@@ -54,7 +76,7 @@
   .extended-content {
     background-color: #fff;
     padding-top: 30px;
-    height: 100%;
+    min-height: 100%;
   }
 
   .background {
@@ -103,6 +125,8 @@
     max-width: 500px;
     margin: 40px auto;
 
+
+
     .slick-list {
       padding: 0 !important;
     }
@@ -128,6 +152,41 @@
       .slick-slide {
         max-width: 160px;
       }
+      .slick-prev:before, .slick-next:before {
+        color: #aaa !important;
+      }
+
+    }
+  }
+
+  .small-image {
+    text-align: center;
+    margin: 30px auto;
+    img {
+      height: 200px;
+      border: 1px solid #ccc;
+      margin: 5px 5px;
+    }
+  }
+
+  .medium-image {
+    text-align: center;
+    margin: 30px auto;
+    img {
+      height: 300px;
+      border: 1px solid #ccc;
+      margin: 5px 5px;
+    }
+  }
+
+  .large-image {
+    text-align: center;
+    margin: 30px auto;
+
+    img {
+      width: 400px;
+      border: 1px solid #ccc;
+      margin: 5px 5px;
     }
   }
 }

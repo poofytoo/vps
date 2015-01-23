@@ -13,10 +13,22 @@
     margin: 130px 0 10px 0;
     text-transform: uppercase;
     letter-spacing: 20px; }
+  .post a {
+    text-decoration: none;
+    color: #3867ff; }
+    .post a:hover {
+      opacity: 0.8; }
+  .post p {
+    line-height: 1.4em; }
+  .post .video {
+    text-align: center;
+    margin: 30px auto; }
+  .post iframe {
+    margin: 0 auto; }
   .post .back-btn {
-    margin-top: 50px; }
+    margin: 50px 0; }
   .post .back {
-    background: url("/images/back.png") no-repeat left center;
+    background: url('/images/back.png') no-repeat left center;
     background-size: 14px;
     padding-left: 20px;
     text-decoration: none;
@@ -27,7 +39,7 @@
     font-weight: 300; }
     .post .back.dark {
       color: #000;
-      background-image: url("/images/back-black.png"); }
+      background-image: url('/images/back-black.png'); }
   .post .content {
     position: absolute;
     transform: translateZ(0px);
@@ -41,7 +53,7 @@
   .post .extended-content {
     background-color: #fff;
     padding-top: 30px;
-    height: 100%; }
+    min-height: 100%; }
   .post .background {
     position: absolute;
     transform: translateZ(-1px) scale(2);
@@ -91,6 +103,29 @@
         cursor: pointer; }
     .post .slideshow .slider-nav .slick-slide {
       max-width: 160px; }
+    .post .slideshow .slider-nav .slick-prev:before, .post .slideshow .slider-nav .slick-next:before {
+      color: #aaa !important; }
+  .post .small-image {
+    text-align: center;
+    margin: 30px auto; }
+    .post .small-image img {
+      height: 200px;
+      border: 1px solid #ccc;
+      margin: 5px 5px; }
+  .post .medium-image {
+    text-align: center;
+    margin: 30px auto; }
+    .post .medium-image img {
+      height: 300px;
+      border: 1px solid #ccc;
+      margin: 5px 5px; }
+  .post .large-image {
+    text-align: center;
+    margin: 30px auto; }
+    .post .large-image img {
+      width: 400px;
+      border: 1px solid #ccc;
+      margin: 5px 5px; }
 
 html, body, #body, .home {
   height: 100%;
@@ -108,37 +143,11 @@ body {
 
 .home {
   position: relative;
-  background: url("../images/island-background.jpg") no-repeat center center fixed;
+  background: url('../images/island-background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  @-webkit-keyframes wigglewiggle {
-    10% {
-      -webkit-transform: rotate(15deg); }
-
-    30% {
-      -webkit-transform: rotate(-25deg); }
-
-    50% {
-      -webkit-transform: rotate(25deg); }
-
-    70% {
-      -webkit-transform: rotate(-15deg); } }
-
-  @keyframes wigglewiggle {
-    10% {
-      transform: rotate(15deg); }
-
-    30% {
-      transform: rotate(-25deg); }
-
-    50% {
-      transform: rotate(25deg); }
-
-    70% {
-      transform: rotate(-15deg); } }
- }
+  background-size: cover; }
   .home .content {
     background-color: #fff;
     height: 100%;
@@ -333,7 +342,7 @@ body {
     margin: 0 auto;
     height: 50px;
     width: 50px;
-    background-image: url("/images/arrow-down.svg");
+    background-image: url('/images/arrow-down.svg');
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -ms-transition: all 0.3s ease-in;
@@ -420,3 +429,33 @@ body {
     width: 100%;
     margin: 0 auto;
     max-width: initial !important; }
+
+@-webkit-keyframes wigglewiggle {
+
+  10% {
+    -webkit-transform: rotate(15deg); }
+
+  30% {
+    -webkit-transform: rotate(-25deg); }
+
+  50% {
+    -webkit-transform: rotate(25deg); }
+
+  70% {
+    -webkit-transform: rotate(-15deg); }
+ }
+
+@keyframes wigglewiggle {
+
+  10% {
+    transform: rotate(15deg); }
+
+  30% {
+    transform: rotate(-25deg); }
+
+  50% {
+    transform: rotate(25deg); }
+
+  70% {
+    transform: rotate(-15deg); }
+ }

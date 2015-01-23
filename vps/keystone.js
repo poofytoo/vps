@@ -35,6 +35,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'Vees',
+	'mongo': 'mongodb://104.131.71.81/vps',
 	'cookie secret': '7u0b><%~u!10C$9XG-`Q<q&P}f3C:oc7]!,WIGR?3K<l+1d@?wqx/}uM:][>e}&B'
 
 });
