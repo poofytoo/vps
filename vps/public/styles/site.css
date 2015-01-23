@@ -15,7 +15,7 @@
     letter-spacing: 20px; }
   .post a {
     text-decoration: none;
-    color: #3867ff; }
+    color: #ff9600; }
     .post a:hover {
       opacity: 0.8; }
   .post p {
@@ -28,7 +28,7 @@
   .post .back-btn {
     margin: 50px 0; }
   .post .back {
-    background: url('/images/back.png') no-repeat left center;
+    background: url("/images/back.png") no-repeat left center;
     background-size: 14px;
     padding-left: 20px;
     text-decoration: none;
@@ -39,7 +39,7 @@
     font-weight: 300; }
     .post .back.dark {
       color: #000;
-      background-image: url('/images/back-black.png'); }
+      background-image: url("/images/back-black.png"); }
   .post .content {
     position: absolute;
     transform: translateZ(0px);
@@ -105,6 +105,13 @@
       max-width: 160px; }
     .post .slideshow .slider-nav .slick-prev:before, .post .slideshow .slider-nav .slick-next:before {
       color: #aaa !important; }
+  .post .tiny-image {
+    text-align: center;
+    margin: 30px auto; }
+    .post .tiny-image img {
+      height: 160px;
+      border: 1px solid #ccc;
+      margin: 5px 5px; }
   .post .small-image {
     text-align: center;
     margin: 30px auto; }
@@ -126,6 +133,13 @@
       width: 400px;
       border: 1px solid #ccc;
       margin: 5px 5px; }
+  .post .single-image {
+    text-align: center;
+    margin: 30px auto; }
+    .post .single-image img {
+      width: 420px;
+      border: 1px solid #ccc;
+      margin: 5px 5px; }
 
 html, body, #body, .home {
   height: 100%;
@@ -143,7 +157,7 @@ body {
 
 .home {
   position: relative;
-  background: url('../images/island-background.jpg') no-repeat center center fixed;
+  background: url("../images/island-background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -342,7 +356,7 @@ body {
     margin: 0 auto;
     height: 50px;
     width: 50px;
-    background-image: url('/images/arrow-down.svg');
+    background-image: url("/images/arrow-down.svg");
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -ms-transition: all 0.3s ease-in;
@@ -431,7 +445,6 @@ body {
     max-width: initial !important; }
 
 @-webkit-keyframes wigglewiggle {
-
   10% {
     -webkit-transform: rotate(15deg); }
 
@@ -442,11 +455,9 @@ body {
     -webkit-transform: rotate(25deg); }
 
   70% {
-    -webkit-transform: rotate(-15deg); }
- }
+    -webkit-transform: rotate(-15deg); } }
 
 @keyframes wigglewiggle {
-
   10% {
     transform: rotate(15deg); }
 
@@ -457,5 +468,4 @@ body {
     transform: rotate(25deg); }
 
   70% {
-    transform: rotate(-15deg); }
- }
+    transform: rotate(-15deg); } }
