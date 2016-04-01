@@ -1,4 +1,4 @@
-@import 'post';
+@import 'post.scss';
 
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
